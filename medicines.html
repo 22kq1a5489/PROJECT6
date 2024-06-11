@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale-0">
+    <title>
+        medicines</title>
+        <style>
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+                margin:0;
+                padding:0;
+                background: color #f7f7f7;
+            }
+            header{
+                background-color: #4CAF50;
+                color:white;
+                text-align:center;
+                padding:1em;
+            }.container{
+                max-width:800px;
+                margin:0 auto;
+                padding:20px;
+            }
+            .medicine{
+display:inline-block;
+width:200px;
+margin:10px;
+border:1px solid #ddd;
+padding:10px;
+background-color:#fff;
+border-radius:5px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+            }
+            .medicine img{
+                max-width:100%;
+                height:auto;
+            }
+            button{
+                background-color: #4CAF50;
+                color:white;
+                border:none;
+                padding:10px 20px;
+                cursor:pointer;
+                border-radius:5px;
+            }
+            button:hover{
+background-color: #4CAF50;
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>MEDICINES</h1>
+        </header>
+        <div class="conatiner">
+            <div class="medicine">
+         <img src="paracetmol.jpg"  alt="medicine">
+         <h3>paracetamol</h3>
+          <p>Rs.18</p>
+      
+        <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+          </div>
+        <div class="medicine">
+        <img src="ibuprofen.jpg"  alt="medicine">
+          <h3>ibuprofen</h3>
+      <p>Rs.18</p>
+       
+          <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+        </div>
+      <div class="medicine">
+        <img src="antihistamine.jpg"  alt="medicine">
+        <h3>antihistamine</h3>
+        <p>Rs.20</p>
+      
+      <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+        </div>
+    <div class="medicine">
+      <img src="ativan.jpg"  alt="medicine">
+    <h3>ativan</h3>
+     <p>Rs.15</p>
+ 
+<button><a class="buynow-button" href="">order</a></button>
+</div>
+<div class="medicine">
+ <img src="aspirin.jpg"  alt="medicine">
+  <h3>aspirin</h3>
+  <p>Rs.10</p>
+  
+   <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+</div>
+<div class="medicine">
+ <img src="metaformin.jpg"  alt="medicine">
+   <h3>metaformin</h3>
+ <p>Rs.29</p>
+
+ <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+   </div>
+ <div class="medicine">
+  <img src="naproxen.jpg"  alt="medicine">
+    <h3>naproxen</h3>
+ <p>Rs.11</p>
+ <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+</div>  <div class="medicine">
+  <img src="ramipril.jpg"  alt="medicine">
+    <h3>ramipril</h3>
+ <p>Rs.14</p>
+
+ <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+ </div>
+<div class="medicine">
+  <img src="cefuroxime.jpg"  alt="medicine">
+  <h3>cefuroxime</h3>
+ <p>Rs.30</p>
+
+   <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+ </div>
+ <div class="medicine">
+  
+ <img src="paroxetine.jpg"  alt="medicine">
+ <h3>paroxetine</h3>
+ <p>Rs.35</p>
+
+  <button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+ </div>
+ <div class="medicine">
+  <img src="emitrol.jpg"  alt="medicine">
+<h3>emitrol</h3>
+ <p>Rs.40</p>
+
+<button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+</div>
+<div class="medicine">
+<img src="benzonatate.jpg"  alt="medicine">
+<h3>benzonatate</h3>
+<p>Rs.30</p>
+
+<button><a class="buynow-button" href="C:\Users\vyshn\OneDrive\Desktop\UIDevelopment\final-project\bill.html">order</a></button>
+</div>
+                                                                                                                                                        
+                                                                                                                                                                    
+                                                                                                                                                    
+                                                                                                                                                                                     
+                               
+<u1 id="cart"></u1>
+</div>
+<script>
+function addToCart(itemName,itemPrice){
+var cart=document.getElementById("cart");
+var entry=document.createElement('li');
+entry.appendChild(document.createTextNode(itenName+'-$'+itemPrice));
+cart.appendChild(entry);
+}
+</script>
+</body>
+</html>

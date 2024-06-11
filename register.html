@@ -1,0 +1,177 @@
+<html>
+<head>
+    <title>
+        Registration Form</title>
+        <style>body{
+            text-align:center;
+            background-image:url(hospital6.jpg);
+            background-size:cover;
+        }
+            .container{
+                background-color:rgba(119, 19, 19, 0.5);
+                padding:20px;
+                border-radius:5px;
+                box-shadow:0 0 20px rgba(0,0,0,0.5);
+            }
+            .container h2{
+                color:white;
+                margin-bottom:20px;
+            
+                text-align:center;
+            }
+            .container label{
+display:block;
+margin-bottom:5px;
+
+color:gray;
+            }
+            .container input{
+                width:50%;
+                padding:15px;
+                margin-bottom:15px;
+               
+border:1px solid grey;
+border-radius:3px;
+background-color:black;
+color:white;
+            }
+            .container input:focus{
+border-color:cyan;
+box-shadow:0 0 8px cyan;
+outline:none;
+            }
+            .container button{
+                width:100%;
+                padding:10px;
+                background-color:black;
+                color:#fff;
+                border:none;
+                border-radius:2px;
+                cursor:pointer;
+                transition:all 0.3s  ease;
+            }
+            .container button:hover{
+                background-color:#00ff00;
+                box-shadow:0 0 8px #00ff00;
+
+            }
+            .container button:focus{
+                outline-width:0ch;
+
+            }
+            .container p{
+                color:black;
+                text-align:center;
+            }
+            .container{
+                position:absolute;
+               top:60%;
+                left:50%;
+             
+transform:translate(-50%,-50%);}
+            form{
+                width:100%;
+            }
+            nav{
+                background-color:rgba(234,45,23);
+                color:aquamarine;
+                padding:10px;
+            }
+            nav ul{
+                list-style-type: none;
+                margin:0;
+                padding:0;
+            }
+            nav ul li{
+                display:inline;
+                margin-right: 20px;
+            }
+            nav ul li a{
+                color:azure;
+                text-decoration:none;
+
+            }
+            nav ul li a:hover{
+                text-decoration:underline;}
+            </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="contactus.html">Contactus</a><li>
+                    <li><a href="register.html">Register</a><li>
+                        <li><a href="bill.html">Bill</a><li><li><a href="medicines.html">Medical Store</a><li></li>
+                        <li><a href="services.html">Services</a><li></li>
+                        <li><a href="visitus.html">Visitus</a><li></li><li><a href="logout.html">Log Out</a><li></li>
+                        <li><a href="follow.html">Follow Us</a><li></li>
+                            
+                       
+                    </ul>
+                </nav>
+                <div class="container">
+        <form action="home.html" registrationform onSubmit="return validateForm()">
+        <h1>REGISTRATION FORM</h1>
+        <label for="username"></label>
+        Username:<input type="text"id="username"name="username"required placeholder="Enter username" autofocus><br>
+        <label for="password"></label>
+        Password: <input type="password"id="password"name="password" reqiured placeholder="Enter password"><br>
+        <label for=" confirmpassword"></label>
+        Confirm Password:<input type="password"id="confirmpassword"name="confirmpassword" reqiured placeholder="Enter password"><br>
+        <label for="email"></label>
+        Email:<input type="email" name="email" id="email"reqired placeholder="Enter email"><br>
+        Address:<input type="text" name="add" placeholder="Enter address"><br>
+        Age:<input type="number" name="num"placeholder="Enter age"><br>
+        <label for="dob"></label>
+        Date of Birth:<input type="date" id="dob" name="dob" required><br>
+        Gender:<input type="radio"name="gender"value="f">female
+        <input type="radio"name="gender"value="m">male<br>
+        <input type="submit" value="register">
+        <script>
+        function validateForm(){
+            const username=document.getElementById('username').value;
+            const password=document.getElementById('password').value;
+            const confirmpassword=document.getElementById('confirmpassword').value;
+        const email=document.getElementById('email').value;
+        const dobInput=document.getElementById('dob');
+        const dob=new Date(dobInput.value);
+        const currentDate=new Date();
+        const radioButtons=document.getElementsByName('gender');
+        let checkedButton=false;
+        for(let i=0;i<radioButtons.length;i++){
+            if(radioButtons[i].checked){
+                checkedButton=true;
+                break;
+            }
+        }
+        if(!checkedButton){
+            alert("please select a gender");
+            return false;
+        }
+        if(isNaN(dob)||dob>currentDate){
+            alert("please enter a valid date of birth in the past");
+            return false;
+        }
+        if(username.length<4||username.length>20){
+            alert("username must be between 4 and 20 characters");
+            return false;}
+            if(password!==confirmpassword){
+                alert("passwords do not match");
+                return false;
+            }
+            if(!validateEmail(email)){
+                alert("invalid email format");
+                return false;
+            }
+            return true;
+        }
+        function validateEmail(email){
+            const emailPattern=/^[^\s@]+@[^\s@]+.[^\s@]+$/;
+            return emailPattern.test(email);
+        }
+    </script>
+    </form></div>
+        </body>
+        </html>

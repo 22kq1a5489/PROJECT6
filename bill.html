@@ -1,0 +1,120 @@
+<html>
+<head>
+    <title>
+        bill</title>
+    </head>
+    <style>
+        body{
+            background-image:url("hbill.jpg");
+            background-size: cover;
+        }
+    h1{
+        text-align:center;
+
+    }
+    h2{
+        text-align:center;
+    }
+    .container{
+                background-color:rgba(119, 19, 19, 0.5);
+                padding:30px;
+                border-radius:5px;
+                box-shadow:0 0 20px rgba(0,0,0,0.5);
+            }
+            .container h2{
+                color:white;
+                margin-bottom:20px;
+            
+                text-align:center;
+            }
+            .container label{
+display:block;
+margin-bottom:5px;
+
+color:gray;
+            }
+            .container input{
+                width:50%;
+                padding:15px;
+                margin-bottom:15px;
+               
+border:1px solid grey;
+border-radius:3px;
+background-color:black;
+color:white;
+            }
+            .container input:focus{
+border-color:cyan;
+box-shadow:0 0 8px cyan;
+outline:none;
+            }
+            .container button{
+                width:100%;
+                padding:10px;
+                background-color:black;
+                color:#fff;
+                border:none;
+                border-radius:2px;
+                cursor:pointer;
+                transition:all 0.3s  ease;
+            }
+            .container button:hover{
+                background-color:#00ff00;
+                box-shadow:0 0 8px #00ff00;
+
+            }
+            .container button:focus{
+                outline-width:0ch;
+
+            }
+            .container p{
+                color:black;
+                text-align:center;
+            }
+            .container{
+                position:absolute;
+                top:50%;
+                left:50%;
+transform:translate(-50%,-50%);}
+            form{
+                width:100%;
+            }
+
+            </style>
+    <body>
+        <marquee>Pay off your debit first.Freedom from debt is worth more than any amount you can earn</marquee>
+        <div class="container">
+        <h1>Bill Payment</h1>
+        <h2>Patient Name:<input type="text" name="pname" autofocus placeholder="Enter patient Name"><br>
+        Patient Id:<input type="number" name="pid" placeholder="Enter patient Id"><br>
+        Hospital Name:<select id="Select Hospital Name" name="hospital">
+            <option value="Apollo Hospital">Apollo Hospital </option>
+            <option value="Manipal Hospital">Manipal Hospital</option>
+            <option value="Max Hospital">Max Hospital</option>
+            <option value="Blk Hospital">Blk Hospital</option>
+            <option value="Narayana Hospital">Narayana Hospital</option>
+            <option value="Jaypee Hospital">Jaypee Hospital</option>
+            <option value="Tata Memorial Hospital">Tata Memoraial Hospital</option>
+            <option value="Aravinda Hospital">Aravinda Hospital</option>
+            <option value="Kauvery Hospital">Kauvery Hospital</option>
+            <option value="Global Hospital">Global Hospital</option>
+        </select><br><br>
+        Payment Type:<select id="Select Payment Type" name="hospital">
+            <option value="credit card">credit card </option>
+            <option value="Debit Card">Debit Card</option>
+            <option value="UPI ID">UPI ID</option>
+        </select><br><br>
+       <button onclick="redirectToPayment()">Proceed to Payment</button>
+        <script>
+            function redirectToPayment() {
+                var paymentMethod = document.getElementById("Select Payment Type").value;
+                if (paymentMethod === "UPI ID") {
+                    window.location.href = "upi.html"; // Redirect to UPI payment page
+                } else if (paymentMethod === "credit card") {
+                    window.location.href = "credit.html"; // Redirect to credit card payment page
+                }else if (paymentMethod === "Debit Card") {
+                    window.location.href = "credit.html";
+            }}
+            </script>
+            </h2></div>
+        </body></html>

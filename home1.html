@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to HealthCare Hospital</title>
+    <link rel="stylesheet" href="styles.css">
+    /* Basic CSS for the hospital website */
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #004080;
+    color: white;
+    padding: 10px 0;
+}
+
+header .logo {
+    float: left;
+    margin-left: 20px;
+}
+
+header nav {
+    float: right;
+    margin-right: 20px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header .search-bar {
+    clear: both;
+    text-align: center;
+    margin: 20px 0;
+}
+
+header .search-bar input {
+    padding: 5px;
+    width: 200px;
+}
+
+header .emergency {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.main-banner {
+    background: url('banner-image.jpg') no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    padding: 100px 0;
+}
+
+.main-banner .btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+section {
+    padding: 40px 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.featured-services .services {
+    display: flex;
+    justify-content: space-around;
+}
+
+.featured-services .service {
+    text-align: center;
+}
+
+.departments ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.departments ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.doctor-profiles {
+    display: flex;
+    justify-content: space-around;
+}
+
+.doctor-profiles .doctor {
+    text-align: center;
+}
+
+footer {
+    background-color: #004080;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-links ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer .footer-social img {
+    width: 30px;
+    margin: 0 10px;
+}</style>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="HealthCare Hospital Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="departments.html">Departments</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="patient-info.html">Patient Information</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="appointments.html">Appointments</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <div class="emergency">
+                <p>Emergency: <strong>(123) 456-7890</strong></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section class="main-banner">
+        <div class="banner-content">
+            <h1>Welcome to HealthCare Hospital</h1>
+            <p>Your health, our priority.</p>
+            <a href="appointments.html" class="btn">Book Appointment</a>
+            <a href="doctors.html" class="btn">Find a Doctor</a>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome">
+        <div class="container">
+            <h2>Welcome to HealthCare Hospital</h2>
+            <p>At HealthCare Hospital, we are dedicated to providing the highest quality medical care in a compassionate and welcoming environment.</p>
+        </div>
+    </section>
+
+    <!-- Featured Services Section -->
+    <section class="featured-services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <img src="service1.jpg" alt="Service 1">
+                    <h3>Cardiology</h3>
+                    <p>Advanced cardiac care and treatment.</p>
+                </div>
+                <div class="service">
+                    <img src="service2.jpg" alt="Service 2">
+                    <h3>Neurology</h3>
+                    <p>Comprehensive neurological services.</p>
+                </div>
+                <div class="service">
+                    <img src="service3.jpg" alt="Service 3">
+                    <h3>Orthopedics</h3>
+                    <p>Expert care for bones and joints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments">
+        <div class="container">
+            <h2>Our Departments</h2>
+            <ul>
+                <li><a href="cardiology.html">Cardiology</a></li>
+                <li><a href="neurology.html">Neurology</a></li>
+                <li><a href="orthopedics.html">Orthopedics</a></li>
+                <li><a href="pediatrics.html">Pediatrics</a></li>
+                <li><a href="radiology.html">Radiology</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Meet Our Doctors Section -->
+    <section class="doctors">
+        <div class="container">
+            <h2>Meet Our Doctors</h2>
+            <div class="doctor-profiles">
+                <div class="doctor">
+                    <img src="doctor1.jpg" alt="Doctor 1">
+                    <h3>Dr. John Doe</h3>
+                    <p>Cardiologist</p>
+                </div>
+                <div class="doctor">
+                    <img src="doctor2.jpg" alt="Doctor 2">
+                    <h3>Dr. Jane Smith</h3>
+                    <p>Neurologist</p>
+                </div>
+                <div class="doctor">
+                    <img src="doctor3.jpg" alt="Doctor 3">
+                    <h3>Dr. Emily Johnson</h3>
+                    <p>Orthopedic Surgeon</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patient Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Patient Testimonials</h2>
+            <div class="testimonial">
+                <p>"The care I received at HealthCare Hospital was exceptional. The staff was compassionate and professional." - Patient A</p>
+            </div>
+            <div class="testimonial">
+                <p>"Thanks to the expert team at HealthCare Hospital, I am now living a healthy life." - Patient B</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Events Section -->
+    <section class="news-events">
+        <div class="container">
+            <h2>News & Events</h2>
+            <div class="news">
+                <p>HealthCare Hospital introduces new state-of-the-art MRI machine.</p>
+            </div>
+            <div class="event">
+                <p>Join us for a free health seminar on June 15th.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tips Section -->
+    <section class="health-tips">
+        <div class="container">
+            <h2>Health Tips</h2>
+            <article>
+                <h3>5 Ways to Maintain a Healthy Heart</h3>
+                <p>Learn how to keep your heart healthy with these simple tips...</p>
+                <a href="health-tips.html">Read more</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p>123 Health St., Wellness City, HC 12345</p>
+                <p>Email: info@healthcarehospital.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

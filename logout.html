@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url("hosback.jpg");
+            background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.logout-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-container h1 {
+    margin-bottom: 10px;
+}
+
+.logout-container p {
+    margin-bottom: 20px;
+}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    // Clear any session or token information stored in localStorage or cookies
+    localStorage.removeItem('authToken'); // Example key
+    document.cookie.split(";").forEach(function(c) { 
+        document.cookie = c.trim().split("=")[0] + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/'; 
+    });
+
+    // Display logout confirmation message
+    document.getElementById('message').textContent = 'You have been logged out successfully.';
+
+    // Redirect to login page after a short delay
+    setTimeout(function() {
+        window.location.href = 'login.html';
+    }, 10000); // Redirect after 2 seconds
+});
+</script>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Logout</h1>
+    
+        <p id="message">Logging you out...</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
